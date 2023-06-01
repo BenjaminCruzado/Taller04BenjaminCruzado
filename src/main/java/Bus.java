@@ -6,8 +6,10 @@ public class Bus {
 	private String modelo;
 	private Empresa empresa;
 	private Conductor conductor;
-	private ArrayList<Viaje> viajes = new ArrayList<Viaje>();
+	private ArrayList<Viaje> viajes;
 
+	public void agregarConductor(Conductor conductor){this.conductor = conductor;}
+	public void agregarViaje(Viaje viaje){this.viajes.add(viaje);}
 	public ArrayList<Viaje> getViajes() {
 		throw new UnsupportedOperationException();
 	}
@@ -41,6 +43,10 @@ public class Bus {
 	}
 
 	public Bus(String patente, String marca, String modelo) {
-		throw new UnsupportedOperationException();
+		this.patente = patente;
+		this.marca = marca;
+		this.modelo = modelo;
+		this.viajes =new ArrayList<Viaje>();
+
 	}
 }

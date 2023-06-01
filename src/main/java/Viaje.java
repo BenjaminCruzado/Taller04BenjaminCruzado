@@ -49,7 +49,11 @@ public class Viaje {
 	}
 
 	public Viaje(String ciudadDeOrigen, String ciudadDeDestino, String horaDeSalida, String horaDeLlegada) {
-		throw new UnsupportedOperationException();
+		this.ciudadDeOrigen = ciudadDeOrigen;
+		this.ciudadDeDestino = ciudadDeDestino;
+		this.horaDeLlegada = horaDeLlegada;
+		this.horaDeSalida = horaDeSalida;
+		this.pasajeros = new ArrayList<>();
 	}
 
 	public void agregarPasajeros(String pasajero) {
