@@ -5,6 +5,12 @@ public class Empresa {
 	private String direccion;
 	private ArrayList<String> redesSociales;
 	private ArrayList<Bus> buses;
+	public Empresa(String rut, String direccion) {
+		this.rut = rut;
+		this.direccion = direccion;
+		this.redesSociales = new ArrayList<>();
+		this.buses = new ArrayList<>();
+	}
 	public void agregarBus(Bus bus){this.buses.add(bus);}
 
 	public void cantidadDeBuses(ArrayList<Bus> buses) {
@@ -37,13 +43,6 @@ public class Empresa {
 
 	public void setRedesSociales(ArrayList<String> redesSociales) {
 		throw new UnsupportedOperationException();
-	}
-
-	public Empresa(String rut, String direccion) {
-		this.rut = rut;
-		this.direccion = direccion;
-		this.redesSociales = new ArrayList<>();
-		this.buses = new ArrayList<>();
 	}
 
 	public void agregarRedSocial(String redSocial) {

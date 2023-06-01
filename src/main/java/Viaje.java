@@ -7,13 +7,20 @@ public class Viaje {
 	private String horaDeSalida;
 	private String horaDeLlegada;
 	private Bus bus;
+	public Viaje(String ciudadDeOrigen, String ciudadDeDestino, String horaDeSalida, String horaDeLlegada) {
+		this.ciudadDeOrigen = ciudadDeOrigen;
+		this.ciudadDeDestino = ciudadDeDestino;
+		this.horaDeLlegada = horaDeLlegada;
+		this.horaDeSalida = horaDeSalida;
+		this.pasajeros = new ArrayList<>();
+	}
 
 	public ArrayList<String> getPasajeros() {
-		throw new UnsupportedOperationException();
+		return pasajeros;
 	}
 
 	public void setPasajeros(ArrayList<String> pasajeros) {
-		throw new UnsupportedOperationException();
+		this.pasajeros = pasajeros;
 	}
 
 	public String getCiudadDeOrigen() {
@@ -48,15 +55,7 @@ public class Viaje {
 		this.horaDeLlegada = horaDeLlegada;
 	}
 
-	public Viaje(String ciudadDeOrigen, String ciudadDeDestino, String horaDeSalida, String horaDeLlegada) {
-		this.ciudadDeOrigen = ciudadDeOrigen;
-		this.ciudadDeDestino = ciudadDeDestino;
-		this.horaDeLlegada = horaDeLlegada;
-		this.horaDeSalida = horaDeSalida;
-		this.pasajeros = new ArrayList<>();
-	}
-
 	public void agregarPasajeros(String pasajero) {
-		throw new UnsupportedOperationException();
+		this.pasajeros.add(pasajero);
 	}
 }

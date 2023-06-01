@@ -7,15 +7,21 @@ public class Bus {
 	private Empresa empresa;
 	private Conductor conductor;
 	private ArrayList<Viaje> viajes;
+	public Bus(String patente, String marca, String modelo) {
+		this.patente = patente;
+		this.marca = marca;
+		this.modelo = modelo;
+		this.viajes =new ArrayList<Viaje>();
+	}
 
 	public void agregarConductor(Conductor conductor){this.conductor = conductor;}
 	public void agregarViaje(Viaje viaje){this.viajes.add(viaje);}
 	public ArrayList<Viaje> getViajes() {
-		throw new UnsupportedOperationException();
+		return viajes;
 	}
 
 	public void setViajes(ArrayList<Viaje> viajes) {
-		throw new UnsupportedOperationException();
+		this.viajes = viajes;
 	}
 
 	public String getPatente() {
@@ -42,11 +48,4 @@ public class Bus {
 		this.modelo = modelo;
 	}
 
-	public Bus(String patente, String marca, String modelo) {
-		this.patente = patente;
-		this.marca = marca;
-		this.modelo = modelo;
-		this.viajes =new ArrayList<Viaje>();
-
-	}
 }
