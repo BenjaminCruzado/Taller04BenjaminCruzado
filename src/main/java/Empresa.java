@@ -12,6 +12,13 @@ public class Empresa {
 		this.buses = new ArrayList<>();
 	}
 	public void agregarBus(Bus bus){this.buses.add(bus);}
+	public void eliminarBusPorPatente(String patente){
+		for (Bus bus : buses) {
+			if (bus.getPatente() == patente) {
+				this.buses.remove(bus);
+			}
+		}
+	}
 
 	public void cantidadDeBuses(ArrayList<Bus> buses) {
 		throw new UnsupportedOperationException();
